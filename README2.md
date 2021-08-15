@@ -1,9 +1,9 @@
 
-  # README Generator
-  
+  # a
+  ![EPL license](https://img.shields.io/eclipse-marketplace/l/notepad4e)
 
   ## Description
-  a cool app
+  b
   
   ## Table of Contents
   * [Installation](#installation)
@@ -13,20 +13,20 @@
   * [Questions](#questions)
   
   ## Installation
-  download it from github
+  c
 
   ## Usage
-  you need npm
+  a
 
+  ## License
   
-    ## License
     The application is covered under EPL.
-      
-  
+     
+  Read More: https://opensource.org/licenses/EPL-2.0
  
   ## Contributing
-  feel free to chime in
+  d
 
   ## Questions
-  [My Github Profile] (https://github.com/SiyanGuo)
-  If you have additional questions, I'm reachable via s@gmail.com.
+  [My Github Profile](https://github.com/e)
+  If you have additional questions, I'm reachable via f.
