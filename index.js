@@ -11,7 +11,7 @@ const questions = [];
 // TODO: Create a function to write README file
 const writeToFile = data =>{
     return new Promise((resolve, reject) =>{
-        fs.writeFile('./dist/README.md', data, err =>{
+        fs.writeFile('./README2.md', data, err =>{
            //if there's an error, reject the Promise and send the error to the Promise's .catch() method
             if (err) {
                reject (err);
@@ -67,7 +67,7 @@ const init = () => {
             type: 'checkbox',
             name: 'license',
             message: 'Please choose a license.',
-            choices: ['MIT License', 'GNU', 'BSD', 'Eclipse']
+            choices: ['Apache', 'BSD', 'EPL', 'MIT']
         },
         {
             type: 'input',
