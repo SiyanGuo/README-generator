@@ -12,7 +12,7 @@ When the app is invoked in command-line application, users will be prompted for 
 * Inquirer Package
 
 ## Website
-A walkthrough video that demonstrates the functionality:
+A walkthrough video that demonstrates the functionality: https://drive.google.com/file/d/1a8M4xXXgqVUS9SxafT7W0hjnQMX1NW7K/view
 
 ## Contribution
 < > with ❤️  by Serena Guo
