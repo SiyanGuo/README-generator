@@ -17,7 +17,7 @@ function renderLicenseBadge(license) {
     default:
       return '';
   }
-}
+};
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
@@ -38,18 +38,25 @@ function renderLicenseLink(license) {
     default:
       return '';
   }
-}
+};
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
-  if (!license) {
-    return ''
+  if (license.length===0) {
+    return '';
   }
-  return `
-    The application is covered under ${license}.
-    `
-}
+  return `## License
+  Licensed under the ${license} license.`;
+};
+
+function renderTableOfContent (license){
+  if (license.length===0) {
+    return '';
+  } else {
+    return `* [License](#license)`;
+  }
+};
 
 
 // TODO: Create a function to generate markdown for README
@@ -65,8 +72,9 @@ function generateMarkdown(data) {
   ## Table of Contents
   * [Installation](#installation)
   * [Usage](#usage)
-  * [License](#license)
   * [Contributing](#contributing)
+  * [Testing](#testing)
+  ${renderTableOfContent(data.license)}
   * [Questions](#questions)
   
   ## Installation
@@ -74,17 +82,18 @@ function generateMarkdown(data) {
 
   ## Usage
   ${data.usage}
-
-  ## License
-  ${renderLicenseSection(data.license)} 
-  ${renderLicenseLink(data.license)}
- 
+  
   ## Contributing
   ${data.contributing}
 
+  ## Testing
+  ${data.testing}
+
+  ${renderLicenseSection(data.license)} 
+  ${renderLicenseLink(data.license)}
+
   ## Questions
-  [My Github Profile](https://github.com/${data.github})
-  If you have additional questions, I'm reachable via ${data.email}.
+  If you have additional questions, I'm reachable via ${data.email}, and [My Github](https://github.com/${data.github}).
 `;
 }
 

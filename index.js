@@ -5,13 +5,10 @@ const inquirer = require('inquirer');
 const generateMarkdown = require('./utils/generateMarkdown.js');
 
 
-// TODO: Create an array of questions for user input
-const questions = [];
-
 // TODO: Create a function to write README file
 const writeToFile = data =>{
     return new Promise((resolve, reject) =>{
-        fs.writeFile('./README2.md', data, err =>{
+        fs.writeFile('./dist/README-sample.md', data, err =>{
            //if there's an error, reject the Promise and send the error to the Promise's .catch() method
             if (err) {
                reject (err);
@@ -61,18 +58,23 @@ const init = () => {
         {
             type: 'input',
             name: 'usage',
-            message: 'Please enter usage information.',
+            message: 'Please enter the usage information.',
+        },
+        {
+            type: 'input',
+            name: 'contributing',
+            message: 'Please enter the contribution guidelines.',
+        },
+        {
+            type: 'input',
+            name: 'testing',
+            message: 'Please enter the test instructions.',
         },
         {
             type: 'checkbox',
             name: 'license',
             message: 'Please choose a license.',
             choices: ['Apache', 'BSD', 'EPL', 'MIT']
-        },
-        {
-            type: 'input',
-            name: 'contributing',
-            message: 'Please enter contribution guidelines.',
         },
         {
             type: 'input',
